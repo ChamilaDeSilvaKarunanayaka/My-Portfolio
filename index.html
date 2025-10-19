@@ -334,6 +334,123 @@
             object-fit: cover;
         }
 
+        /* Education Section */
+        .education {
+            background-color: var(--bg);
+        }
+
+        .education-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .education-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .education-institution {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .education-period {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .education-details {
+            color: var(--text-light);
+        }
+
+        /* Experience Section */
+        .experience {
+            background-color: var(--bg-secondary);
+        }
+
+        .experience-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .experience-period {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .experience-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .experience-highlights {
+            list-style-type: none;
+        }
+
+        .experience-highlights li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .experience-highlights li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
         /* Skills Section */
         .skills-grid {
             display: grid;
@@ -370,9 +487,52 @@
             color: var(--text-light);
         }
 
+        /* Communication Skills */
+        .communication-skills {
+            margin-top: 80px;
+        }
+
+        .skills-bars {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-bar {
+            margin-bottom: 25px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            font-weight: 600;
+        }
+
+        .skill-percentage {
+            color: var(--primary);
+        }
+
+        .skill-progress {
+            height: 8px;
+            background-color: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress-bar {
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+            transition: width 1.5s ease-in-out;
+        }
+
         /* Projects Section */
         .projects {
-            background-color: var(--bg-secondary);
+            background-color: var(--bg);
         }
 
         .projects-grid {
@@ -434,6 +594,10 @@
         }
 
         /* Contact Section */
+        .contact {
+            background-color: var(--bg-secondary);
+        }
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -529,7 +693,7 @@
 
         /* Footer */
         footer {
-            background-color: var(--bg-secondary);
+            background-color: var(--bg);
             padding: 50px 0 20px;
         }
 
@@ -649,6 +813,17 @@
                 font-size: 2rem;
             }
             
+            .education-header,
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .education-period,
+            .experience-period {
+                margin-top: 10px;
+            }
+            
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
@@ -695,6 +870,8 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -722,7 +899,7 @@
                 <div class="profile-image fade-in delay-1">
                     <div class="profile-img-container">
                         <!-- Replace with your actual profile picture -->
-                       
+                        
                     </div>
                     <div class="profile-bg"></div>
                 </div>
@@ -740,17 +917,66 @@
             <div class="about-content">
                 <div class="about-text fade-in">
                     <h3>Building the Future with Code</h3>
-                    <p>I'm a detail-oriented Software Engineering undergraduate at Sabaragamuwa University of Sri Lanka, specializing in building modern, full-stack web applications with the JavaScript and TypeScript ecosystem.</p>
-                    <p>My hands-on experience involves developing robust server-side applications with Node.js and Express.js, and building dynamic, high-performance frontends using Next.js and React. I am proficient in connecting applications to databases like PostgreSQL using modern tools like Drizzle ORM.</p>
-                    <p>I enjoy enhancing projects with AI functionalities, leveraging APIs like Gemini AI and Speech-to-Text to create smarter, more interactive solutions.</p>
+                    <p>I'm a detail-oriented <strong>Software Engineering undergraduate</strong> at <strong>Sabaragamuwa University of Sri Lanka</strong>, specializing in building modern, full-stack web applications with the JavaScript and TypeScript ecosystem.</p>
+                    <p>I am deeply passionate about creating seamless user experiences and integrating cutting-edge technologies, particularly in the realm of AI.</p>
+                    <p>My hands-on experience involves developing robust server-side applications with <strong>Node.js and Express.js</strong>, and building dynamic, high-performance frontends using <strong>Next.js and React</strong>. I am proficient in connecting applications to databases like <strong>PostgreSQL</strong> using modern tools like Drizzle ORM.</p>
+                    <p>I enjoy enhancing projects with AI functionalities, leveraging APIs like <strong>Gemini AI</strong> and <strong>Speech-to-Text</strong> to create smarter, more interactive solutions.</p>
+                    <p>I am actively seeking a <strong>Software Engineering internship</strong> where I can contribute my skills in a fast-paced environment. I am a collaborative team player and a dedicated problem-solver, eager to learn from industry experts and help build exceptional digital products.</p>
                     <a href="#contact" class="btn">Let's Connect</a>
                 </div>
                 <div class="about-image fade-in delay-1">
                     <div class="about-img-container">
                         <!-- Replace with your actual profile picture -->
-                        
+                       
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div>
+                        <h3 class="education-title">BSc (Hons) Software Engineering</h3>
+                        <div class="education-institution">Sabaragamuwa University of Sri Lanka</div>
+                    </div>
+                    <div class="education-period">Undergraduate</div>
+                </div>
+                <div class="education-details">
+                    <p>Currently pursuing a comprehensive software engineering degree with focus on modern web technologies, AI integration, and software development methodologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Full Stack Developer</h3>
+                        <div class="experience-company">Freelancer</div>
+                    </div>
+                    <div class="experience-period">Present</div>
+                </div>
+                <p class="experience-description">Building scalable web applications and AI-powered solutions for clients worldwide. Specializing in modern JavaScript frameworks and integrating cutting-edge AI technologies.</p>
+                <ul class="experience-highlights">
+                    <li>Developed full-stack web applications using MERN stack</li>
+                    <li>Integrated AI functionalities using Gemini AI and Speech-to-Text APIs</li>
+                    <li>Built responsive and performant frontends with Next.js and React</li>
+                    <li>Designed and implemented RESTful APIs with Node.js and Express</li>
+                    <li>Managed PostgreSQL and MongoDB databases with modern ORMs</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -759,7 +985,7 @@
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-title">
-                <h2>My Skills</h2>
+                <h2>Technical Skills</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-card fade-in">
@@ -803,6 +1029,51 @@
                     </div>
                     <h3>Python</h3>
                     <p>Scripting, Automation, Data Analysis</p>
+                </div>
+            </div>
+
+            <!-- Communication Skills -->
+            <div class="communication-skills">
+                <div class="section-title">
+                    <h2>Communication Skills</h2>
+                </div>
+                <div class="skills-bars fade-in">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Team Collaboration</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Problem Solving</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Client Communication</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span class="skill-name">Technical Documentation</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1007,12 +1278,22 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fade-in');
+                    
+                    // Animate skill bars when they come into view
+                    if (entry.target.classList.contains('skill-bar')) {
+                        const progressBar = entry.target.querySelector('.skill-progress-bar');
+                        const width = progressBar.style.width;
+                        progressBar.style.width = '0';
+                        setTimeout(() => {
+                            progressBar.style.width = width;
+                        }, 300);
+                    }
                 }
             });
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.hero-text, .profile-image, .about-text, .about-image, .skill-card, .project-card, .contact-info, .contact-form').forEach(el => {
+        document.querySelectorAll('.hero-text, .profile-image, .about-text, .about-image, .education-item, .experience-item, .skill-card, .skill-bar, .project-card, .contact-info, .contact-form').forEach(el => {
             observer.observe(el);
         });
     </script>
