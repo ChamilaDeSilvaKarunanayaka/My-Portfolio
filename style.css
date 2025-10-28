@@ -744,6 +744,37 @@ footer {
     animation-delay: 0.6s;
 }
 
+/* Typing effect for hero title (loops: type, pause, erase, pause) */
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid currentColor; /* caret */
+    width: 0;
+    /* 23 characters in "Hi, I'm Dilshan Chamila" => 46 steps for type+erase */
+    animation: typeErase 6s steps(46, end) infinite, caret 0.75s step-end infinite;
+}
+
+@keyframes typeErase {
+    0%   { width: 0; }
+    45%  { width: 23ch; } /* typing */
+    55%  { width: 23ch; } /* pause fully typed */
+    100% { width: 0; }    /* erasing */
+}
+
+@keyframes caret {
+    50% { border-color: transparent; }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .typing {
+        border-right: none;
+        width: auto;
+        animation: fadeIn 600ms ease forwards; /* fall back to simple fade */
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero h1 {
