@@ -77,6 +77,87 @@ document.querySelectorAll('.hero-text, .profile-image, .about-text, .about-image
     observer.observe(el);
 });
 
+// Talents section scroll functionality
+const talentsScrollContainer = document.querySelector('.overflow-x-auto.whitespace-nowrap');
+
+if (talentsScrollContainer) {
+    // Add smooth scrolling behavior
+    talentsScrollContainer.style.scrollBehavior = 'smooth';
+    
+    // Optional: Auto-scroll functionality (uncomment if desired)
+    /*
+    let scrollInterval;
+    let scrollDirection = 1;
+    
+    const autoScroll = () => {
+        const maxScroll = talentsScrollContainer.scrollWidth - talentsScrollContainer.clientWidth;
+        
+        if (talentsScrollContainer.scrollLeft >= maxScroll) {
+            scrollDirection = -1;
+        } else if (talentsScrollContainer.scrollLeft <= 0) {
+            scrollDirection = 1;
+        }
+        
+        talentsScrollContainer.scrollLeft += scrollDirection * 2;
+    };
+    
+    // Start auto-scroll when section is in view
+    const talentsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                scrollInterval = setInterval(autoScroll, 30);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    talentsObserver.observe(talentsScrollContainer.closest('section'));
+    
+    // Pause auto-scroll on hover
+    talentsScrollContainer.addEventListener('mouseenter', () => {
+        clearInterval(scrollInterval);
+    });
+    
+    talentsScrollContainer.addEventListener('mouseleave', () => {
+        scrollInterval = setInterval(autoScroll, 30);
+    });
+    */
+    
+    // Add touch/mouse drag scrolling
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    talentsScrollContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        talentsScrollContainer.style.cursor = 'grabbing';
+        startX = e.pageX - talentsScrollContainer.offsetLeft;
+        scrollLeft = talentsScrollContainer.scrollLeft;
+    });
+    
+    talentsScrollContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        talentsScrollContainer.style.cursor = 'grab';
+    });
+    
+    talentsScrollContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        talentsScrollContainer.style.cursor = 'grab';
+    });
+    
+    talentsScrollContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - talentsScrollContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        talentsScrollContainer.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Set initial cursor style
+    talentsScrollContainer.style.cursor = 'grab';
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
