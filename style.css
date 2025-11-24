@@ -717,6 +717,21 @@ nav {
     transition-duration: 300ms;
 }
 
+/* Talents & Beyond Image Frames */
+#talents img {
+    border: 8px solid var(--card-bg);
+    box-shadow: 0 8px 20px var(--shadow), 
+                0 0 0 1px rgba(58, 134, 255, 0.1);
+    background-color: var(--card-bg);
+    padding: 8px;
+}
+
+#talents img:hover {
+    box-shadow: 0 12px 30px var(--shadow),
+                0 0 0 2px var(--primary);
+    border-color: var(--primary);
+}
+
 /* Contact Section */
 .contact {
     background-color: var(--bg-secondary);
