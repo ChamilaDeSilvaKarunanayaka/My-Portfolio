@@ -12,15 +12,15 @@
 }
 
 .dark-mode {
-    --primary: #4dabf7;
-    --secondary: #9c36ff;
-    --accent: #ff6b9d;
-    --text: #f1f3f5;
-    --text-light: #adb5bd; 
-    --bg: #121212;
-    --bg-secondary: #1e1e1e;
-    --card-bg: #1e1e1e;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --primary: #5fb3ff;
+    --secondary: #b24dff;
+    --accent: #ff3377;
+    --text: #ffffff;
+    --text-light: #b0b8c0; 
+    --bg: #0a0a0a;
+    --bg-secondary: #141414;
+    --card-bg: #181818;
+    --shadow: rgba(0, 0, 0, 0.6);
 }
 
 * {
