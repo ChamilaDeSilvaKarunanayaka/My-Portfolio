@@ -5,6 +5,7 @@
     --text: #333333;
     --text-light: #666666;
     --bg: #ffffff;
+    --bg-rgb: 255, 255, 255;
     --bg-secondary: #f8f9fa;
     --card-bg: #ffffff;
     --shadow: rgba(0, 0, 0, 0.1);
@@ -18,6 +19,7 @@
     --text: #ffffff;
     --text-light: #b0b8c0; 
     --bg: #0a0a0a;
+    --bg-rgb: 10, 10, 10;
     --bg-secondary: #141414;
     --card-bg: #181818;
     --shadow: rgba(0, 0, 0, 0.6);
@@ -32,6 +34,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -62,7 +65,18 @@ header {
     z-index: 1000;
     background-color: var(--bg);
     box-shadow: 0 2px 10px var(--shadow);
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+header.scrolled {
+    padding: 5px 0;
+    background-color: rgba(var(--bg-rgb), 0.95);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.dark-mode header.scrolled {
+    background-color: rgba(10, 10, 10, 0.95);
 }
 
 nav {
@@ -70,6 +84,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    transition: var(--transition);
+}
+
+header.scrolled nav {
+    padding: 15px 0;
 }
 
 .logo {
@@ -77,15 +96,21 @@ nav {
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 10px;
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .nav-links a {
@@ -94,10 +119,19 @@ nav {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 .nav-links a:hover {
     color: var(--primary);
+    background-color: rgba(58, 134, 255, 0.1);
+}
+
+.nav-links a.active {
+    color: var(--primary);
+    background: linear-gradient(135deg, rgba(58, 134, 255, 0.15), rgba(131, 56, 236, 0.15));
+    font-weight: 600;
 }
 
 .nav-links a::after {
@@ -105,14 +139,16 @@ nav {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--primary);
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     transition: var(--transition);
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 60%;
 }
 
 .theme-toggle {
@@ -122,10 +158,14 @@ nav {
     font-size: 1.2rem;
     cursor: pointer;
     transition: var(--transition);
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .theme-toggle:hover {
     color: var(--primary);
+    background-color: rgba(58, 134, 255, 0.1);
+    transform: rotate(15deg);
 }
 
 .menu-toggle {
@@ -135,6 +175,18 @@ nav {
     color: var(--text);
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background-color: rgba(58, 134, 255, 0.1);
+    color: var(--primary);
+}
+
+.menu-toggle.active i {
+    transform: rotate(90deg);
 }
 
 /* Hero Section */
@@ -1780,7 +1832,10 @@ footer {
         align-items: center;
         justify-content: flex-start;
         padding-top: 50px;
-        transition: var(--transition);
+        transition: left 0.4s ease;
+        gap: 0;
+        box-shadow: 0 4px 20px var(--shadow);
+        backdrop-filter: blur(10px);
     }
     
     .nav-links.active {
@@ -1788,7 +1843,28 @@ footer {
     }
     
     .nav-links li {
-        margin: 15px 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px 30px;
+        width: 100%;
+        font-size: 1.1rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(58, 134, 255, 0.1);
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: linear-gradient(135deg, rgba(58, 134, 255, 0.2), rgba(131, 56, 236, 0.2));
+        border-left: 4px solid var(--primary);
+    }
+    
+    .nav-links a::after {
+        display: none;
     }
     
     .hero-name {
