@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="container nav-inner">
         <a className="nav-logo" href="#home" onClick={e => { e.preventDefault(); scrollTo('#home') }}>
-          DC<span>.</span>
+          Dilshan Chamila <span>.</span>
         </a>
         <ul className={`nav-links${open ? ' open' : ''}`}>
           {links.map(l => (

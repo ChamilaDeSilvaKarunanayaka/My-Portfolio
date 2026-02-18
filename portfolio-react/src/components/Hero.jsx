@@ -40,12 +40,10 @@ export default function Hero() {
           {/* Image */}
           <div className="hero-img-wrap fade-up visible">
             <div className="hero-img-ring">
-              <img src="/profile.jpg" alt="Dilshan Chamila" />
-            </div>
-            <div className="hero-stats">
-              <div className="stat-box"><div className="num">3+</div><div className="lbl">Projects</div></div>
-              <div className="stat-box"><div className="num">2+</div><div className="lbl">Years Coding</div></div>
-              <div className="stat-box"><div className="num">10+</div><div className="lbl">Tech Stack</div></div>
+              <img src="/profile.jpg" alt="Dilshan Chamila"
+                onError={e => { e.target.style.display = 'none'; e.target.nextElementSibling.style.display = 'flex' }}
+              />
+              <div className="hero-img-placeholder" style={{ display: 'none' }}>👨‍💻</div>
             </div>
           </div>
         </div>

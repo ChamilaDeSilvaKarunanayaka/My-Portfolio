@@ -42,7 +42,7 @@ export default function About() {
             </div>
             <div className="about-stats-row">
               <div className="about-stat"><div className="num grad">3+</div><div className="lbl">Projects Built</div></div>
-              <div className="about-stat"><div className="num grad">2+</div><div className="lbl">Years Exp.</div></div>
+              <div className="about-stat"><div className="num grad">2+</div><div className="lbl">Years Coding</div></div>
               <div className="about-stat"><div className="num grad">10+</div><div className="lbl">Technologies</div></div>
             </div>
           </div>
