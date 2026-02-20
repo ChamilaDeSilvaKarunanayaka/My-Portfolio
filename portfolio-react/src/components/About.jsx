@@ -21,8 +21,8 @@ export default function About() {
             <p className="about-label">About Me</p>
             <h2 className="about-title">Building the Future with Code</h2>
             <p className="about-desc">
-              I'm a <strong style={{ color: '#e2e8f0' }}>Full-Stack Software Developer</strong> specializing in modern web applications and AI-powered solutions.
-              With hands-on experience in the <strong style={{ color: '#e2e8f0' }}>MERN stack</strong> and emerging AI technologies,
+              I'm a <strong style={{ color: 'var(--text)' }}>Full-Stack Software Developer</strong> specializing in modern web applications and AI-powered solutions.
+              With hands-on experience in the <strong style={{ color: 'var(--text)' }}>MERN stack</strong> and emerging AI technologies,
               I build scalable, user-centric digital products that solve real-world problems.
             </p>
             <p className="about-desc">
