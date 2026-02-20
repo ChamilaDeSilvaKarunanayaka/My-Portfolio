@@ -19,6 +19,52 @@
   --glow: 0 0 40px rgba(99,102,241,0.25);
 }
 
+/* ===== Light Mode Variables ===== */
+[data-theme="light"] {
+  --bg: #f4f6ff;
+  --bg2: #eaecf8;
+  --card: #ffffff;
+  --card2: #eef0fb;
+  --border: rgba(99,102,241,0.2);
+  --accent: #6366f1;
+  --accent2: #8b5cf6;
+  --cyan: #0891b2;
+  --green: #059669;
+  --text: #1e293b;
+  --muted: #64748b;
+  --white: #1e293b;
+  --shadow: 0 4px 24px rgba(99,102,241,0.1);
+  --glow: 0 0 40px rgba(99,102,241,0.18);
+}
+
+/* ===== Light Mode Specific Overrides ===== */
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(244,246,255,0.95);
+}
+[data-theme="light"] .nav-links {
+  background: transparent;
+}
+@media (max-width: 768px) {
+  [data-theme="light"] .nav-links.open {
+    background: var(--bg2);
+  }
+}
+[data-theme="light"] .hero-bg {
+  background: radial-gradient(ellipse 70% 60% at 70% 40%, rgba(99,102,241,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 50% at 10% 80%, rgba(139,92,246,0.05) 0%, transparent 60%);
+}
+[data-theme="light"] .project-badge {
+  background: rgba(244,246,255,0.92);
+  color: var(--accent);
+}
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+  background: var(--bg2);
+}
+[data-theme="light"] .theme-toggle {
+  color: var(--text);
+}
+
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
 
 body {
@@ -139,6 +185,19 @@ ul { list-style: none; }
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 .nav-cta { display: flex; gap: 12px; align-items: center; }
 .nav-hamburger { display: none; background: none; border: none; color: var(--text); font-size: 1.3rem; cursor: pointer; }
+.theme-toggle {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.1rem;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); transform: rotate(20deg); }
 
 @media (max-width: 768px) {
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--bg2); padding: 20px; border-bottom: 1px solid var(--border); gap: 16px; }

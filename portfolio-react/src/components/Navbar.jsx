@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
+import { useTheme } from '../context/ThemeContext'
 
 const links = [
   { href: '#home', label: 'Home' },
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('#home')
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => {
@@ -61,6 +63,9 @@ export default function Navbar() {
           <a href="#contact" className="btn btn-primary" onClick={e => { e.preventDefault(); scrollTo('#contact') }}>
             Get in Touch
           </a>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="toggle theme">
+            {theme === 'dark' ? <FiSun /> : <FiMoon />}
+          </button>
           <button className="nav-hamburger" onClick={() => setOpen(o => !o)} aria-label="menu">
             {open ? <FiX /> : <FiMenu />}
           </button>
