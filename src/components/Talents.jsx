@@ -46,6 +46,32 @@ export default function Talents() {
           <strong style={{ color: '#e2e8f0' }}>organize extracurricular events</strong> with <strong style={{ color: '#e2e8f0' }}>IEEE</strong> and the{' '}
           <strong style={{ color: '#e2e8f0' }}>Society of Computer Science</strong> at Sabaragamuwa University of Sri Lanka.
         </p>
+
+        {/* Role Badge */}
+        <div className="fade-up" style={{ display: 'flex', justifyContent: 'center', marginBottom: 36 }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 14,
+            background: 'var(--card)',
+            border: '1px solid rgba(99,102,241,0.35)',
+            borderLeft: '4px solid var(--accent)',
+            borderRadius: 12,
+            padding: '14px 24px',
+            boxShadow: '0 4px 24px rgba(99,102,241,0.12)',
+          }}>
+            <span style={{ fontSize: '1.6rem' }}>🎙️</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                Current Role
+              </span>
+              <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--white)' }}>
+                Sub-Coordinator — Main Announcing Circle
+              </span>
+              <span style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>
+                Sabaragamuwa University of Sri Lanka (SUSL)
+              </span>
+            </div>
+          </div>
+        </div>
         <div
           className="talents-scroll"
           ref={scrollRef}
