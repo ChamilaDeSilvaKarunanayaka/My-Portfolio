@@ -212,7 +212,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: 100px 0 60px;
 }
 .hero-bg {
@@ -266,8 +266,97 @@ ul { list-style: none; }
   max-width: 440px;
   margin-bottom: 32px;
   line-height: 1.7;
+  text-align: justify;
 }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+
+/* ===== CV DROPDOWN ===== */
+.cv-dropdown-wrap { position: relative; }
+.cv-btn { gap: 6px; }
+.cv-chevron {
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+  margin-left: 2px;
+}
+.cv-chevron.open { transform: rotate(180deg); }
+
+.cv-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 300px;
+  background: var(--card);
+  border: 1px solid rgba(99,102,241,0.35);
+  border-radius: 14px;
+  padding: 8px;
+  z-index: 9999;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(99,102,241,0.1);
+  animation: dropIn 0.2s ease;
+}
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cv-option {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+}
+.cv-option:hover {
+  background: rgba(99,102,241,0.1);
+  border-color: rgba(99,102,241,0.25);
+}
+.cv-option + .cv-option { margin-top: 4px; }
+
+.cv-option-icon {
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem;
+}
+.cv-option-icon.se {
+  background: rgba(99,102,241,0.15);
+  color: var(--accent);
+}
+.cv-option-icon.ai {
+  background: rgba(34,211,238,0.12);
+  color: var(--cyan);
+}
+
+.cv-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.cv-option-text strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.cv-option-text small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.cv-option-dl {
+  font-size: 1rem;
+  color: var(--muted);
+  transition: color 0.18s, transform 0.18s;
+}
+.cv-option:hover .cv-option-dl {
+  color: var(--accent);
+  transform: translateY(1px);
+}
 .hero-social { display: flex; gap: 12px; margin-top: 28px; }
 .hero-social a {
   width: 40px; height: 40px;
