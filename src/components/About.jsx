@@ -21,9 +21,11 @@ export default function About() {
             <p className="about-label">About Me</p>
             <h2 className="about-title">Building the Future with Code</h2>
             <p className="about-desc">
-              I'm a <strong style={{ color: 'var(--text)' }}>Full-Stack Software Developer</strong> specializing in modern web applications and AI-powered solutions.
-              With hands-on experience in the <strong style={{ color: 'var(--text)' }}>MERN stack</strong> and emerging AI technologies,
-              I build scalable, user-centric digital products that solve real-world problems.
+              I'm a <strong style={{ color: 'var(--text)' }}>Full-Stack Software Developer</strong> specializing in modern web
+              applications and <strong style={{ color: 'var(--text)' }}>AI/ML solutions</strong>.
+              With hands-on experience in the <strong style={{ color: 'var(--text)' }}>MERN stack</strong> for scalable web development
+              and <strong style={{ color: 'var(--text)' }}>Python, TensorFlow &amp; OpenCV</strong> for machine learning and computer vision,
+              I build intelligent, user-centric digital products that solve real-world problems.
             </p>
             <p className="about-desc">
               Currently pursuing my BSc (Hons) in Software Engineering at Sabaragamuwa University of Sri Lanka,
@@ -41,7 +43,7 @@ export default function About() {
               ))}
             </div>
             <div className="about-stats-row">
-              <div className="about-stat"><div className="num grad">3+</div><div className="lbl">Projects Built</div></div>
+              <div className="about-stat"><div className="num grad">5+</div><div className="lbl">Projects Built</div></div>
               <div className="about-stat"><div className="num grad">2+</div><div className="lbl">Years Coding</div></div>
               <div className="about-stat"><div className="num grad">10+</div><div className="lbl">Technologies</div></div>
             </div>
