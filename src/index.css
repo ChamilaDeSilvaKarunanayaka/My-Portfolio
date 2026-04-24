@@ -571,7 +571,8 @@ ul { list-style: none; }
   cursor: default;
 }
 .tech-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
-.tech-card img { width: 36px; height: 36px; object-fit: contain; }
+.tech-card .tech-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; }
+.tech-card .tech-icon svg { width: 36px; height: 36px; }
 .tech-card span { font-size: 0.7rem; font-weight: 600; color: var(--muted); text-align: center; }
 
 /* ===== PROJECTS ===== */
