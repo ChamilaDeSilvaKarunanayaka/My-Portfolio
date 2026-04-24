@@ -2,11 +2,11 @@ import { useRef } from 'react'
 import useFadeUp from '../hooks/useFadeUp'
 
 const images = [
-  { src: '/talent1.jpeg', alt: 'Announcing' },
-  { src: '/talent2.jpeg', alt: 'Leadership' },
-  { src: '/talent3.jpg', alt: 'IEEE Event' },
-  { src: '/talent4.jpg', alt: 'Society Event' },
-  { src: '/talent5.jpg', alt: 'Extra Activities' },
+  { src: '/images/profile/talent-1.webp', alt: 'Announcing' },
+  { src: '/images/profile/talent-2.webp', alt: 'Leadership' },
+  { src: '/images/profile/talent-3.webp', alt: 'IEEE Event' },
+  { src: '/images/profile/talent-4.webp', alt: 'Society Event' },
+  { src: '/images/profile/talent-5.webp', alt: 'Extra Activities' },
 ]
 
 export default function Talents() {

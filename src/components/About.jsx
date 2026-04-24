@@ -15,7 +15,7 @@ export default function About() {
       <div className="container">
         <div className="about-grid" ref={ref}>
           <div className="about-img-wrap fade-up">
-            <img src="/profile.jpg" alt="Dilshan Chamila" />
+            <img src="/images/profile/avatar.webp" alt="Dilshan Chamila" />
           </div>
           <div className="about-content fade-up">
             <p className="about-label">About Me</p>
@@ -53,3 +53,4 @@ export default function About() {
     </section>
   )
 }
+

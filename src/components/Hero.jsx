@@ -112,7 +112,7 @@ export default function Hero() {
           {/* Image */}
           <div className="hero-img-wrap fade-up visible">
             <div className="hero-img-ring">
-              <img src="/profile.jpg" alt="Dilshan Chamila"
+              <img src="/images/profile/avatar.webp" alt="Dilshan Chamila"
                 onError={e => { e.target.style.display = 'none'; e.target.nextElementSibling.style.display = 'flex' }}
               />
               <div className="hero-img-placeholder" style={{ display: 'none' }}>👨‍💻</div>
@@ -123,3 +123,4 @@ export default function Hero() {
     </section>
   )
 }
+

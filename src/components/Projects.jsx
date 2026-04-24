@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'InterviewGenie',
     badge: 'AI-Powered',
-    img: '/interviewgenie.png',
+    img: '/images/projects/interviewgenie/thumbnail.webp',
     desc: 'AI-powered mock interview platform with real-time feedback and intelligent question generation.',
     tags: ['Next.js', 'React', 'PostgreSQL', 'Drizzle ORM', 'Gemini AI', 'Tailwind CSS'],
     demo: 'https://www.linkedin.com/posts/dcdskarunanayaka_%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%9D%F0%9D%90%AE%F0%9D%90%9C%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%AF%F0%9D%90%A2%F0%9D%90%9E%F0%9D%90%B0%F0%9D%90%86%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%9E-activity-7358534778528100354-ggg5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE51YIEBrTCtX1BSo373XMSL-9dyXkfWh1o',
@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Premier Scales Management',
     badge: 'Client Project',
-    img: '/premier-scales.png',
+    img: '/images/projects/premier-scales/thumbnail.webp',
     desc: 'Complete platform for scale repairs, calibrations, parts management, and billing with RBAC.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Google Cloud', 'JWT/RBAC'],
     demo: '#',
@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'ATM Guard AI',
     badge: 'Computer Vision',
-    img: '/atm-guard.png',
+    img: '/images/projects/atm-guard/thumbnail.webp',
     desc: 'Real-time surveillance system using computer vision and deep learning for ATM security.',
     tags: ['Python', 'TensorFlow', 'OpenCV', 'React.js', 'MongoDB', 'Firebase'],
     demo: 'https://www.linkedin.com/posts/activity-7432323055974244352-S2dN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE51YIEBrTCtX1BSo373XMSL-9dyXkfWh1o',
@@ -33,7 +33,7 @@ const projects = [
   {
     title: 'GlowCart',
     badge: 'Ongoing',
-    img: '/glowcart.png',
+    img: '/images/projects/glowcart/thumbnail.webp',
     desc: 'Scalable MERN-based e-commerce platform for online beauty product shopping with cart, checkout, and secure authentication features.',
     tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS', 'JWT/RBAC'],
     demo: '#',
@@ -42,7 +42,7 @@ const projects = [
   {
     title: 'Integrated Academic Information System',
     badge: 'Group Project/Ongoing',
-    img: '/academic-system.png',
+    img: '/images/projects/academic-system/thumbnail.webp',
     desc: 'Secure, scalable mark management system with 3-tier RBAC, 10+ RESTful APIs, and automated PDF & Excel report generation — reducing manual academic record processing by ~70%.',
     tags: ['React Native', '.NET', 'MySQL', 'JWT', 'RESTful APIs'],
     demo: '#',
