@@ -72,7 +72,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div className="project-card fade-up" key={p.title}>
               <div className="project-thumb">
-                <img src={p.img} alt={p.title} />
+                <img src={p.img} alt={p.title} loading="lazy" decoding="async" />
                 <div className="project-badge">{p.badge}</div>
               </div>
               <div className="project-body">

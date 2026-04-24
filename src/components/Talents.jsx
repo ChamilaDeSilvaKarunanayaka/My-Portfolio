@@ -82,7 +82,7 @@ export default function Talents() {
           style={{ cursor: 'grab' }}
         >
           {images.map((img, i) => (
-            <img key={i} src={img.src} alt={img.alt} />
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" decoding="async" />
           ))}
         </div>
       </div>

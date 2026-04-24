@@ -14,7 +14,7 @@
   --text: #e2e8f0;
   --muted: #94a3b8;
   --white: #ffffff;
-  --font: 'Inter', sans-serif;
+  --font: 'Inter', system-ui, sans-serif;
   --shadow: 0 4px 24px rgba(99,102,241,0.12);
   --glow: 0 0 40px rgba(99,102,241,0.25);
 }
