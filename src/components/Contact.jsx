@@ -1,18 +1,37 @@
-import { useState } from 'react'
-import { FiMail, FiMapPin, FiSend } from 'react-icons/fi'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import { FiMail, FiMapPin, FiSend, FiLoader } from 'react-icons/fi'
 import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import useFadeUp from '../hooks/useFadeUp'
 
 export default function Contact() {
   const ref = useFadeUp()
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const formRef = useRef()
+  const [sending, setSending] = useState(false)
+  const [status, setStatus] = useState(null) // 'success' | 'error' | null
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault()
-    setSent(true)
-    setForm({ name: '', email: '', subject: '', message: '' })
-    setTimeout(() => setSent(false), 4000)
+    setSending(true)
+    setStatus(null)
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then(() => {
+        setStatus('success')
+        formRef.current.reset()
+      })
+      .catch(() => {
+        setStatus('error')
+      })
+      .finally(() => {
+        setSending(false)
+        setTimeout(() => setStatus(null), 5000)
+      })
   }
 
   return (
@@ -51,29 +70,54 @@ export default function Contact() {
 
           {/* Form side */}
           <div className="fade-up">
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
               <div className="form-group">
-                <label htmlFor="name">Your Name</label>
-                <input id="name" type="text" placeholder="John Doe" required
-                  value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+                <label htmlFor="contact-name">Your Name</label>
+                {/* name="from_name" must match your EmailJS template variable */}
+                <input id="contact-name" type="text" name="from_name"
+                  placeholder="John Doe" required />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Your Email</label>
-                <input id="email" type="email" placeholder="john@example.com" required
-                  value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
+                <label htmlFor="contact-email">Your Email</label>
+                {/* name="user_email" must match your EmailJS template variable */}
+                <input id="contact-email" type="email" name="user_email"
+                  placeholder="john@example.com" required />
               </div>
               <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input id="subject" type="text" placeholder="Project Inquiry" required
-                  value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })} />
+                <label htmlFor="contact-subject">Subject</label>
+                {/* name="subject" must match your EmailJS template variable */}
+                <input id="contact-subject" type="text" name="subject"
+                  placeholder="Project Inquiry" required />
               </div>
               <div className="form-group">
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message" placeholder="Tell me about your project..." required
-                  value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
+                <label htmlFor="contact-message">Your Message</label>
+                {/* name="message" must match your EmailJS template variable */}
+                <textarea id="contact-message" name="message"
+                  placeholder="Tell me about your project..." required />
               </div>
-              <button type="submit" className="btn btn-primary form-submit">
-                <FiSend /> {sent ? 'Message Sent! ✓' : 'Send Message'}
+
+              {/* Inline status feedback */}
+              {status === 'success' && (
+                <p style={{ color: 'var(--accent)', fontWeight: 600, marginBottom: 8 }}>
+                  ✓ Message sent! I'll get back to you soon.
+                </p>
+              )}
+              {status === 'error' && (
+                <p style={{ color: '#ff6b6b', fontWeight: 600, marginBottom: 8 }}>
+                  ✗ Something went wrong. Please try again.
+                </p>
+              )}
+
+              {/* Button is disabled while sending to prevent duplicate submissions */}
+              <button
+                type="submit"
+                id="contact-submit"
+                className="btn btn-primary form-submit"
+                disabled={sending}
+                style={{ opacity: sending ? 0.65 : 1, cursor: sending ? 'not-allowed' : 'pointer' }}
+              >
+                <FiSend />
+                {sending ? ' Sending…' : ' Send Message'}
               </button>
             </form>
           </div>
