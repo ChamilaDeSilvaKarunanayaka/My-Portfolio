@@ -19,7 +19,7 @@ const projects = [
     desc: 'Complete platform for scale repairs, calibrations, parts management, and billing with RBAC.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Google Cloud', 'JWT/RBAC'],
     demo: '#',
-    code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/premier-scales-syste',
+    code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/premier-scales-system',
   },
   {
     title: 'ATM Guard AI',
@@ -55,7 +55,7 @@ const projects = [
     desc: 'Predictive analytics tool using Scikit-learn to forecast student outcomes (pass/fail) with 92% accuracy, powered by a FastAPI for instant predictions.',
     tags: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'FastAPI'],
     demo: '#',
-    code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/premier-scales-system',
+    code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/ml-projects',
   },
 ]
 
