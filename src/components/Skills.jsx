@@ -144,12 +144,18 @@ const icons = {
       <path d="M12.5 20.5a6 6 0 110-9m7 3h3m0 0v-2m0 2v2m0-2h2m-2 0h-2" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
+  'Jupyter Notebook': (
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm12 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z" fill="#F37626"/>
+    </svg>
+  ),
 }
 
 const tech = [
   'HTML5','CSS3','JavaScript','TypeScript','React','Next.js',
   'Node.js','Express','Python','PostgreSQL','MongoDB',
   'TensorFlow','OpenCV','Docker','AWS','Git','GitHub','Firebase','.Net','C#',
+  'Jupyter Notebook'
 ]
 
 const skills = [

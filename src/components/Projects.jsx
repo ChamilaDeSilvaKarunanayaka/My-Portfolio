@@ -57,6 +57,15 @@ const projects = [
     demo: '#',
     code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/ml-projects',
   },
+  {
+    title: 'LapPredict',
+    badge: 'Machine Learning',
+    img: '/images/projects/lappredict/thumbnail.png',
+    desc: 'A machine learning-based web application to predict laptop prices based on key specifications, featuring a Random Forest Regression model and a Flask web interface.',
+    tags: ['Python', 'Scikit-learn', 'Pandas', 'Flask', 'Jupyter Notebook', 'HTML/CSS'],
+    demo: '#',
+    code: 'https://github.com/stars/ChamilaDeSilvaKarunanayaka/lists/ml-projects',
+  },
 ]
 
 export default function Projects() {
