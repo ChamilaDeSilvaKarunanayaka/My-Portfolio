@@ -40,11 +40,11 @@ export default function Talents() {
           <h2 className="fade-up">✨ Talents &amp; Beyond</h2>
         </div>
         <p className="talents-desc fade-up">
-          🎤 I'm a <strong style={{ color: '#e2e8f0' }}>skilled announcer</strong> with experience in{' '}
-          <strong style={{ color: '#e2e8f0' }}>several cultural events</strong>. Beyond announcing, I excel in{' '}
-          <strong style={{ color: '#e2e8f0' }}>leadership roles</strong> and actively{' '}
-          <strong style={{ color: '#e2e8f0' }}>organize extracurricular events</strong> with <strong style={{ color: '#e2e8f0' }}>IEEE</strong> and the{' '}
-          <strong style={{ color: '#e2e8f0' }}>Society of Computer Science</strong> at Sabaragamuwa University of Sri Lanka.
+          🎤 I'm a <strong style={{ color: 'var(--white)' }}>skilled announcer</strong> with experience in{' '}
+          <strong style={{ color: 'var(--white)' }}>several cultural events</strong>. Beyond announcing, I excel in{' '}
+          <strong style={{ color: 'var(--white)' }}>leadership roles</strong> and actively{' '}
+          <strong style={{ color: 'var(--white)' }}>organize extracurricular events</strong> with <strong style={{ color: 'var(--white)' }}>IEEE</strong> and the{' '}
+          <strong style={{ color: 'var(--white)' }}>Society of Computer Science</strong> at Sabaragamuwa University of Sri Lanka.
         </p>
 
         {/* Role Badge */}
