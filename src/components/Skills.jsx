@@ -132,16 +132,17 @@ const icons = {
       <path d="M5.8 24.6l10.2-5 1.4 5.1-11.6-.1z" fill="#FFA000"/>
     </svg>
   ),
-  '.Net': (
+  PHP: (
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="16" cy="16" r="13" fill="#512BD4"/>
-      <text x="7" y="21" fill="white" fontSize="11" fontFamily="monospace" fontWeight="bold">.NET</text>
+      <ellipse cx="16" cy="16" rx="14" ry="10" fill="#777BB4"/>
+      <text x="6" y="20" fill="white" fontSize="11" fontFamily="monospace" fontWeight="bold">php</text>
     </svg>
   ),
-  'C#': (
+  Laravel: (
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 3l11 6.3v12.7L16 28.1 5 22V9.3L16 3z" fill="#9B4F96"/>
-      <path d="M12.5 20.5a6 6 0 110-9m7 3h3m0 0v-2m0 2v2m0-2h2m-2 0h-2" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M16 3L3 8.3L4.8 24.5L16 29l11.2-4.5L29 8.3L16 3z" fill="#FF2D20"/>
+      <path d="M16 6.5l-9.5 3.8-1.5 12L16 26l11-3.7-1.5-12L16 6.5z" fill="white"/>
+      <path d="M11 13h2.5v5.5H19v2.5H11V13z" fill="#FF2D20"/>
     </svg>
   ),
   'Jupyter Notebook': (
@@ -154,7 +155,7 @@ const icons = {
 const tech = [
   'HTML5','CSS3','JavaScript','TypeScript','React','Next.js',
   'Node.js','Express','Python','PostgreSQL','MongoDB',
-  'TensorFlow','OpenCV','Docker','AWS','Git','GitHub','Firebase','.Net','C#',
+  'TensorFlow','OpenCV','Docker','AWS','Git','GitHub','Firebase','PHP','Laravel',
   'Jupyter Notebook'
 ]
 
@@ -172,8 +173,8 @@ const skills = [
   { name: 'Git / GitHub', pct: 90 },
   { name: 'REST APIs', pct: 88 },
   { name: 'Figma', pct: 70 },
-  { name: '.Net', pct: 70 },
-  { name: 'C#', pct: 70 },
+  { name: 'PHP', pct: 70 },
+  { name: 'Laravel', pct: 70 },
 ]
 
 export default function Skills() {
